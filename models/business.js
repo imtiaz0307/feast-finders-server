@@ -33,11 +33,7 @@ const businessSchema = new Schema({
     coverPicture: {
         type: String,
         default: '',
-    },
-    ratings: {
-        type: Number,
-        default: 0,
-    },
+    }
 });
 
 export const Business = model("business", businessSchema)

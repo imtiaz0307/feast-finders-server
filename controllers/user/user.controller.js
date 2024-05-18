@@ -1,5 +1,5 @@
 import { INTERNAL_SERVER_ERROR, REQUIRED_FIELDS_ERROR } from "../../config/app.config.js";
-import { BusinessCategory } from "../../models/business-categories.js";
+import { BusinessCategory } from "../../models/business-category.js";
 import { Business } from "../../models/business.js";
 import { Individual } from "../../models/individual.js";
 import { User } from "../../models/user.js";

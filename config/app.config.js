@@ -23,3 +23,13 @@ export const NO_USER_ERROR = {
     status: false,
     message: "No user found!"
 }
+
+export const NO_BUSINESS_ERROR = {
+    status: false,
+    message: "No business found!"
+}
+
+export const NO_PRODUCT_ERROR = {
+    status: false,
+    message: "No product found!"
+}
