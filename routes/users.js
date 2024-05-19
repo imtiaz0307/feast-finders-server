@@ -5,7 +5,7 @@ import { BusinessSignup, checkBusinessAvailability } from "../controllers/user/b
 import { becomeRider, individualSignup } from "../controllers/user/individual.controller.js";
 import { verifyUser } from "../middlewares/verifyUser.js";
 import { getAllProductCategories } from "../controllers/admin/product-categories.controller.js";
-import { addNewProduct, deleteProduct, updateProduct } from "../controllers/user/product.controller.js";
+import { addNewProduct, deleteProduct, getAllProducts, getProductDetails, updateProduct } from "../controllers/user/product.controller.js";
 
 const router = Router()
 
@@ -23,8 +23,8 @@ router.post("/business/available", checkBusinessAvailability)
 router.post("/business/signup", BusinessSignup)
 router.get("/business/categories/get-all-categories", getAllBusinessCategories)
 // products routes
-router.get("/business/products/get-all-products/:business_id/:skip/:limit")
-router.get("/business/products/get-product-details/:product_id")
+router.get("/business/products/get-all-products/:business_id/:skip/:limit", getAllProducts)
+router.get("/business/products/get-product-details/:product_id", getProductDetails)
 router.get("/business/products/get-all-product-categories", verifyUser, getAllProductCategories)
 router.post("/business/products/add-new-product/:business_id", verifyUser, addNewProduct)
 router.put("/business/products/update-product/:business_id/:product_id", verifyUser, updateProduct)

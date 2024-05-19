@@ -41,6 +41,10 @@ const productSchema = new Schema(
         rating: {
             type: Number,
             default: 0
+        },
+        number_of_orders: {
+            type: Number,
+            default: 0
         }
     },
     {
